@@ -33,7 +33,7 @@ public class DataDriven {
         int sheets = excel.getNumberOfSheets();
 
         for(int i =0; i< sheets;i++){
-            if(excel.getSheetName(i).equalsIgnoreCase("Casos de Pruebas")){
+            if(excel.getSheetName(i).equalsIgnoreCase("Pruebas001")){
                 XSSFSheet hojaExcel = excel.getSheetAt(i);
 
                 Iterator<Row> filas = hojaExcel.iterator();
@@ -46,7 +46,7 @@ public class DataDriven {
                 int columna =0;
                 while(celdas.hasNext()){
                     Cell celdaSelecciona = celdas.next();
-                    if(celdaSelecciona.getStringCellValue().equalsIgnoreCase("Pruebas001")){
+                    if(celdaSelecciona.getStringCellValue().equalsIgnoreCase("CasosdePruebas")){
                         //Encontre la columna con los nombres de los casos de prueba
                         columna = k;
                     }

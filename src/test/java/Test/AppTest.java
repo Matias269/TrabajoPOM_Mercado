@@ -45,11 +45,12 @@ public class AppTest {
     //Test donde selecciona el inventario completo de la pagina y lo compra
 
     public void testCase01(){
-        //data = DataDriven.getTestData("testCase01");
 
-        pagina1.funcion("standard_user", "secret_sauce");
+        data = DataDriven.getTestData("testCase01");
+
+        pagina1.funcion(data.get(1), data.get(2));
         pagina2.seleccion();
-        pagina3.laCompra("Matias","Mercado","5300");
+        pagina3.laCompra(data.get(3),data.get(4),data.get(5));
 
     }
 
@@ -58,9 +59,11 @@ public class AppTest {
 
     public void testCase02(){
 
-        pagina1.funcion("standard_user", "secret_sauce");
+        data = DataDriven.getTestData("testCase02");
+
+        pagina1.funcion(data.get(1), data.get(2));
         pagina2.seleccion2();
-        pagina3.laCompra("Matias","Mercado","5300");
+        pagina3.laCompra(data.get(3),data.get(4),data.get(5));
     }
 
    @Test
@@ -68,7 +71,9 @@ public class AppTest {
 
    public void testCase03(){
 
-       pagina1.funcion("standard_user", "secret_sauce");
+       data = DataDriven.getTestData("testCase03");
+
+       pagina1.funcion(data.get(1), data.get(2));
        pagina2.seleccion3();
        pagina3.salirPagina();
 
@@ -78,16 +83,20 @@ public class AppTest {
 //Inicia sesion en la marketplace, hace clic en la red social Twitter la abre y cierra Saucedemo
    public void testCase04(){
 
-       pagina1.funcion("standard_user", "secret_sauce");
+       data = DataDriven.getTestData("testCase04");
+
+       pagina1.funcion(data.get(1), data.get(2));
        pagina2.seleccion4();
 
    }
 
 @Test
    public void testCase05(){
+
+       data = DataDriven.getTestData("testCase05");
+
        pagina1.funcion("locked_out_user", "secret_sauce");
 
-    //puedo agregar el assert
 
    }
 
@@ -97,7 +106,7 @@ public class AppTest {
 
     public void Poscondiciones(){
 
-        //pagina1.cerrar();
+        pagina1.cerrar();
 
     }
 }

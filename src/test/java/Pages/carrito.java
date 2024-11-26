@@ -10,9 +10,11 @@ public class carrito extends BaseClass {
         super(driver);
     }
 
+    By nombre = By.xpath("//input[@data-test='firstName']");
+
     public void laCompra(String firstName, String lastName,String postalCode){
 
-           agregarTexto(esperaExplicita(By.xpath("//input[@data-test='firstName']"),10),firstName);
+           agregarTexto(esperaExplicita(nombre,10),firstName);
 
             agregarTexto(esperaExplicita(By.xpath("//input[@data-test='lastName']"),10),lastName);
 
